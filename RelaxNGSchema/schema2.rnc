@@ -1,0 +1,13 @@
+start = element root {
+  element shipname { xsd:string },
+  element date { xsd:string },
+  element para {
+  attribute n { xsd:integer },
+    xsd:string
+  }*,
+  element summary { xsd:string }?,
+  element roomdetails { xsd:string },
+  element aboutroommate { xsd:string },
+  element roommatespeaks { xsd:string },
+  element source { xsd:string }
+}
