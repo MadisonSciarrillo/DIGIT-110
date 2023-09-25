@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div1 type="electronictranscription">
+    <div2 type="fragment_extrageneric" xml:id="a156.txt.1">
+        <!--  hand="rough" ink="pencil"  -->
+        <ab type="lines">
+            <delSpan rend="diagonal lines (2)" spanTo="delend09"/>
+            Dont you think
+            <lb/>
+            you
+            <app>
+                <rdg corresp="a156.would" xml:id="a156.could">could</rdg>
+                <rdg corresp="a156.could" xml:id="a156.would">
+                    <add place="infralinear" type="variant">would</add>
+                </rdg>
+            </app>
+            un
+            <lb/>
+            derstand if you
+            <lb/>
+            perhaps tried
+            <lb/>
+            The Rafters of
+            <lb/>
+            the Apocalypse
+            <lb/>
+            must not be
+            <lb/>
+            too bare
+            <lb/>
+            Of the sweet
+            <lb/>
+            Adjacency that
+            <lb/>
+            Exalts by humbling
+            <lb/>
+            I
+            <app>
+                <rdg corresp="a156.4" xml:id="a156.3">
+                    remember
+                    <lb/>
+                </rdg>
+                <rdg corresp="a156.3" xml:id="a156.4">
+                    never knew
+                    <lb/>
+                </rdg>
+            </app>
+            when Questions
+            <lb/>
+            are not needed
+            <lb/>
+            for answers
+            <lb/>
+            <anchor xml:id="delend09"/>
+        </ab>
+    </div2>
+    <pb rend="reverse (A 156)"/>
+    <div2 type="poem" xml:id="a156.txt.2" rend="rough-copy draft, with alternatives">
+        <!--   hand="rough" ink="pencil"  -->
+        <ab type="lines_verse">
+            Bliss is the
+            <lb/>
+            <app>
+                <rdg corresp="a156.trinket" xml:id="a156.plaything">plaything</rdg>
+                <rdg corresp="a156.plaything" xml:id="a156.trinket">
+                    <add place="infralinear_the_variant_appears_on_the_next_line_following_child" type="variant"> trinket</add>
+                </rdg>
+            </app>
+            of the
+            <lb/>
+            child -
+            <lb/>
+            The secret of
+            <lb/>
+            the man
+            <lb/>
+            <seg type="var" corresp="a156.2" xml:id="a156.1">
+                The sacred
+                <lb/>
+                stealth of Boy
+                <lb/>
+                and Girl
+                <lb/>
+            </seg>
+            Rebuke it
+            <lb/>
+            if we can
+            <lb/>
+            <seg type="var" corresp="a156.1" xml:id="a156.2">
+                The happy
+                <lb/>
+                guilt of
+                <lb/>
+                Boy and
+                <lb/>
+                Girl -
+                <lb/>
+            </seg>
+        </ab>
+    </div2>
+</div1>

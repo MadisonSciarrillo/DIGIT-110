@@ -1,0 +1,51 @@
+start = element divxml {
+    attribute type { "electronictranscription" },
+    div1
+}
+
+# Define the div1 element
+div1 = element div1 {
+    attribute type { "electronictranscription" },
+    (div2, pb+)
+}
+
+# Define the pb element
+pb = element pb {
+    attribute rend { xsd:string }
+}
+
+# Define the div2 element
+div2 = element div2 {
+    attribute type { "fragment_extrageneric" },
+    attribute xml:id { xsd:string },
+    attribute rend { xsd:string },
+    ab
+}
+ab = element ab {
+    attribute type { "lines" },
+    (delSpan*, text*, lb?, app*)
+}
+delSpan = element delSpan {
+    attribute rend { xsd:string },
+    attribute spanTo { xsd:string }
+}
+lb = element lb {
+    text
+}
+app = element app {
+    rdg+
+}
+rdg = element rdg {
+    attribute corresp { xsd:string },
+    attribute xml:id { xsd:string },
+    mixed { text+ }
+}
+text =text = element text { mixed { text* } }
+seg = element seg {
+    attribute type { xsd:string },
+    attribute corresp { xsd:string },
+    attribute xml:id { xsd:string },
+    mixed { text* }
+}
+
+
