@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar ns="http://www.tei-c.org/ns/1.0" xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+  <start>
+    <element name="TEI">
+      <attribute>
+        <name ns="http://www.w3.org/XML/1998/namespace">lang</name>
+        <data type="NCName"/>
+      </attribute>
+      <element name="teiHeader">
+        <element name="fileDesc">
+          <element name="titleStmt">
+            <ref name="title"/>
+            <element name="author">
+              <attribute name="who"/>
+              <text/>
+            </element>
+          </element>
+          <element name="publicationStmt">
+            <element name="publisher">
+              <text/>
+            </element>
+            <element name="availability">
+              <attribute name="status">
+                <data type="NCName"/>
+              </attribute>
+              <ref name="p"/>
+            </element>
+          </element>
+          <element name="sourceDesc">
+            <element name="desc">
+              <attribute name="n">
+                <data type="integer"/>
+              </attribute>
+              <attribute>
+                <name ns="http://www.w3.org/XML/1998/namespace">lang</name>
+                <data type="NCName"/>
+              </attribute>
+            </element>
+            <ref name="p"/>
+          </element>
+        </element>
+      </element>
+      <element name="text">
+        <element name="body">
+          <element name="head">
+            <text/>
+          </element>
+          <oneOrMore>
+            <ref name="p"/>
+          </oneOrMore>
+          <element name="schemaSpec">
+            <attribute name="docLang">
+              <data type="NCName"/>
+            </attribute>
+            <attribute name="ident">
+              <data type="NCName"/>
+            </attribute>
+            <attribute name="prefix">
+              <data type="NCName"/>
+            </attribute>
+            <attribute name="start"/>
+            <attribute name="targetLang">
+              <data type="NCName"/>
+            </attribute>
+            <oneOrMore>
+              <element name="moduleRef">
+                <optional>
+                  <attribute name="except"/>
+                </optional>
+                <attribute name="key">
+                  <data type="NCName"/>
+                </attribute>
+                <attribute name="n">
+                  <data type="integer"/>
+                </attribute>
+              </element>
+            </oneOrMore>
+          </element>
+        </element>
+      </element>
+    </element>
+  </start>
+  <define name="title">
+    <element name="title">
+      <optional>
+        <attribute name="level">
+          <data type="NCName"/>
+        </attribute>
+      </optional>
+      <oneOrMore>
+        <choice>
+          <text/>
+          <element name="date">
+            <attribute name="when">
+              <data type="date"/>
+            </attribute>
+            <text/>
+          </element>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="p">
+    <element name="p">
+      <oneOrMore>
+        <choice>
+          <text/>
+          <ref name="title"/>
+          <element name="att">
+            <data type="NCName"/>
+          </element>
+          <element name="emph">
+            <text/>
+          </element>
+          <element name="gi">
+            <data type="NCName"/>
+          </element>
+          <element name="name">
+            <attribute name="type">
+              <data type="NCName"/>
+            </attribute>
+            <data type="NCName"/>
+          </element>
+          <element name="q">
+            <text/>
+          </element>
+          <element name="soCalled">
+            <data type="NCName"/>
+          </element>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+</grammar>

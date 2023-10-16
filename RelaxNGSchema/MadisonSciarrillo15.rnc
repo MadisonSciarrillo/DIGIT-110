@@ -1,0 +1,72 @@
+default namespace = "http://www.tei-c.org/ns/1.0"
+
+start =
+  element TEI {
+    attribute xml:lang { xsd:NCName },
+    element teiHeader {
+      element fileDesc {
+        element titleStmt {
+          title,
+          element author {
+            attribute who { text },
+            text
+          }
+        },
+        element publicationStmt {
+          element publisher { text },
+          element availability {
+            attribute status { xsd:NCName },
+            p
+          }
+        },
+        element sourceDesc {
+          element desc {
+            attribute n { xsd:integer },
+            attribute xml:lang { xsd:NCName }
+          },
+          p
+        }
+      }
+    },
+    element text {
+      element body {
+        element head { text },
+        p+,
+        element schemaSpec {
+          attribute docLang { xsd:NCName },
+          attribute ident { xsd:NCName },
+          attribute prefix { xsd:NCName },
+          attribute start { text },
+          attribute targetLang { xsd:NCName },
+          element moduleRef {
+            attribute except { text }?,
+            attribute key { xsd:NCName },
+            attribute n { xsd:integer }
+          }+
+        }
+      }
+    }
+  }
+title =
+  element title {
+    attribute level { xsd:NCName }?,
+    (text
+     | element date {
+         attribute when { xsd:date },
+         text
+       })+
+  }
+p =
+  element p {
+    (text
+     | title
+     | element att { xsd:NCName }
+     | element emph { text }
+     | element gi { xsd:NCName }
+     | element name {
+         attribute type { xsd:NCName },
+         xsd:NCName
+       }
+     | element q { text }
+     | element soCalled { xsd:NCName })+
+  }
